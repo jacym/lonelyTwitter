@@ -1,3 +1,16 @@
+
+/*
+ * Lonely Twitter Activity
+ *
+ * Version 1.0
+ *
+ * September 27, 2017
+ *
+ * Copyright © 2017 Jacy Mark, CMPUT301, University of Alberta - All Rights Reserved.
+ * You may use, distribute, or modify this code under terms and conditions of the Code of Student Behavior at University of Alberta.
+ * You can find a copy of the license in this project. Otherwise please contact contact@abc.ca
+ */
+
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.BufferedReader;
@@ -24,6 +37,14 @@ import android.widget.ListView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * Represents the lonely twitter activity
+ *
+ * @author jmark
+ * @version 1.5
+ * @see Tweet
+ * @since 1.0
+ */
 public class LonelyTwitterActivity extends Activity {
 
 	private static final String FILENAME = "file.sav";
@@ -35,7 +56,7 @@ public class LonelyTwitterActivity extends Activity {
 	
 	/** Called when the activity is first created. */
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
@@ -92,6 +113,14 @@ public class LonelyTwitterActivity extends Activity {
 		oldTweetsList.setAdapter(adapter);
 	}
 
+    /**
+     * Loads from file.
+     *
+     * @author jmark
+     * @version 1.0
+     * @see Tweet
+     * @since 1.5
+     */
 	private void loadFromFile() {
         try {
             FileInputStream fis = openFileInput(FILENAME);
@@ -106,7 +135,15 @@ public class LonelyTwitterActivity extends Activity {
             throw new RuntimeException(e);
         }
     }
-	
+
+    /**
+     * Save to file.
+     *
+     * @author jmark
+     * @version 1.0
+     * @see Tweet
+     * @since 1.5
+     */
 	private void saveInFile() {
 		try {
 			FileOutputStream fos = openFileOutput(FILENAME,
