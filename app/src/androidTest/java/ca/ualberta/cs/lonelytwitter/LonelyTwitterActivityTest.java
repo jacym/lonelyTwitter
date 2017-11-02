@@ -3,10 +3,13 @@ package ca.ualberta.cs.lonelytwitter;
 import android.app.Activity;
 import android.test.ActivityInstrumentationTestCase2;
 
-import junit.framework.TestCase;
-
+/*
+changed default file template
+removed unused import
+ */
 /**
  * Created by wz on 14/09/15.
+ * activity test
  */
 public class LonelyTwitterActivityTest extends ActivityInstrumentationTestCase2 {
 
